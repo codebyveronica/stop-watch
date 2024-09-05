@@ -6,15 +6,15 @@ function padStart(value) {
     return String(value).padStart(2, "0");
 }
 
-function setTimer() {
+function setTime() {
     const minutes = Math.floor(secondsElapsed / 60);
     const seconds = secondsElapsed % 60;
     time.innerHTML = `${padStart(minutes)}:${padStart(seconds)}`;
 }
 
-function timer() {
+function timer(){
     secondsElapsed++;
-    setTimer();
+    setTime();
 }
 
 function startClock() {
@@ -29,5 +29,5 @@ function stopClock() {
 function resetClock() {
     stopClock();
     secondsElapsed = 0;
-    setTimer();
+    setTime();
 }
